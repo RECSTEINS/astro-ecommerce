@@ -1,0 +1,10 @@
+---
+export const { producto } = Astro.props;
+---
+
+<div class="producto-card">
+  <img src={producto.imagen} alt={producto.nombre} />
+  <h2>{producto.nombre}</h2>
+  <p>{producto.descripcion}</p>
+  <span>Precio: ${producto.precio}</span>
+</div>
