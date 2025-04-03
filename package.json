@@ -5,10 +5,11 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro preview --port ${PORT}",
+    "start": "astro preview --port $PORT",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "postinstall": "npm install --omit=dev"
   },
   "dependencies": {
     "@astrojs/react": "^1.2.1",
