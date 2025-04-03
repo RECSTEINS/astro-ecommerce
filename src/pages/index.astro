@@ -30,12 +30,12 @@ import IncentiveLarge from '../components/incentives/incentiveLarge';
 import IncentiveCols from '../components/incentives/incentiveCols';
 
 
-// Obtener productos desde el backend
-let responseProducts = await fetch('http://localhost:3001/productos');
+let apiUrl = import.meta.env.PUBLIC_API_URL;
+
+let responseProducts = await fetch(`${apiUrl}/productos`);
 let products = await responseProducts.json();
 
-// Obtener categorías desde el backend
-let responseCategories = await fetch('http://localhost:3001/categorias');
+let responseCategories = await fetch(`${apiUrl}/categorias`);
 let categories = await responseCategories.json();
 ---
 
